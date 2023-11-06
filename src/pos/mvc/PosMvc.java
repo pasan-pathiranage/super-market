@@ -4,6 +4,8 @@
  */
 package pos.mvc;
 
+import pos.mvc.view.CustomerView;
+
 /**
  *
  * @author User
@@ -14,8 +16,8 @@ public class PosMvc {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("Hello");
-    }
+        new CustomerView().setVisible(true);
+        
     
+}
 }
