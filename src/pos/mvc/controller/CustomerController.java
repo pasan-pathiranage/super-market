@@ -56,7 +56,7 @@ public class CustomerController {
                     rst.getString(1),
                     rst.getString(2),
                     rst.getString(3),
-                    rst.getString(4), 
+                    rst.getString(4),   
                     rst.getDouble(5),
                     rst.getString(6),
                     rst.getString(7),
