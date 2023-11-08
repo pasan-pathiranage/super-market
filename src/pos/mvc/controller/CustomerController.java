@@ -99,7 +99,8 @@ public class CustomerController {
     public String updateCustomer(CustomerModel customerModel) throws SQLException{ 
         Connection connection = DBConnection.getInstance().getConnection();
         
-        String sql = "UPDATE Customer SET CustTitle=?, CustName=?, DPB=?, Salary=?, CustAddress=?, City=?, Province=?, PostalCode=? WHERE CustID=? ";
+        String sql = "UPDATE Customer SET CustTitle=?, CustName=?, DPB=?, Salary=?, CustAddress=?, City=?, Province=?, "
+                + "PostalCode=? WHERE CustID=? ";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(9, customerModel.getCustId());
         preparedStatement.setString(1, customerModel.getTitle()); 
