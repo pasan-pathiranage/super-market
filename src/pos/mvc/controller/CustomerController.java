@@ -56,7 +56,7 @@ public class CustomerController {
                     rst.getString(1),
                     rst.getString(2),
                     rst.getString(3),
-                    rst.getString(4), 
+                    rst.getString(4),   
                     rst.getDouble(5),
                     rst.getString(6),
                     rst.getString(7),
@@ -99,7 +99,8 @@ public class CustomerController {
     public String updateCustomer(CustomerModel customerModel) throws SQLException{ 
         Connection connection = DBConnection.getInstance().getConnection();
         
-        String sql = "UPDATE Customer SET CustTitle=?, CustName=?, DPB=?, Salary=?, CustAddress=?, City=?, Province=?, PostalCode=? WHERE CustID=? ";
+        String sql = "UPDATE Customer SET CustTitle=?, CustName=?, DPB=?, Salary=?, CustAddress=?, City=?, Province=?, "
+                + "PostalCode=? WHERE CustID=? ";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(9, customerModel.getCustId());
         preparedStatement.setString(1, customerModel.getTitle()); 
